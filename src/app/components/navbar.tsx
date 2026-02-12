@@ -40,7 +40,7 @@ export default function SiteNavbar() {
           className={cn(italianno.className, "text-pretty text-2xl md:text-3xl leading-none")}
           aria-label="Yung Ravage home"
         >
-          Yung Ravage
+          Uno Vee 
         </Link>
 
         {/* Desktop nav */}

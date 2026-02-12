@@ -44,65 +44,54 @@ export default function AboutSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1508973379184-7517410fb0bc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFwJTIwY29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000)",
+            backgroundImage: "url('https://res-console.cloudinary.com/diml90c1y/thumbnails/v1/image/upload/v1770927919/V2hdHNBcHBfSW1hZ2VfMjAyNi0wMi0xMl9hdF8yMC41Ni41M18xX25tN2Zldw==/drilldownh')",
             filter: "brightness(0.8) contrast(1.2)"
           }}
         />
         
-        {/* Multiple Dark Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
+        {/* Multiple Dark Gradient Overlays - Updated to blue/cyan */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/40 to-black" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-transparent to-black/90" />
-        <div className="absolute inset-0 bg-gradient-to-t from-purple-950/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-950/20 via-transparent to-transparent" />
       </div>
 
-      {/* Animated Purple Gradient Orbs */}
+      {/* Animated Blue/Cyan Gradient Orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse" 
+             style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" 
+             style={{ animationDuration: '5s', animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-3xl animate-pulse" 
+             style={{ animationDuration: '6s', animationDelay: '2s' }} />
         <motion.div
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.25, 0.45, 0.25],
-            x: [0, 60, 0],
-            y: [0, 40, 0],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-purple-600/30 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.4, 1],
-            opacity: [0.2, 0.4, 0.2],
+            opacity: [0.15, 0.3, 0.15],
             x: [0, -50, 0],
             y: [0, 50, 0],
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-          className="absolute top-1/3 -right-32 w-[700px] h-[700px] bg-purple-700/25 rounded-full blur-3xl"
+          className="absolute top-1/3 -right-32 w-[700px] h-[700px] bg-cyan-600/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.15, 0.35, 0.15],
+            opacity: [0.1, 0.25, 0.1],
             x: [0, 40, 0],
             y: [0, -40, 0],
           }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-          className="absolute bottom-0 left-1/4 w-[650px] h-[650px] bg-purple-800/20 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.35, 1],
-            opacity: [0.1, 0.3, 0.1],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-900/15 rounded-full blur-3xl"
+          className="absolute bottom-0 left-1/4 w-[650px] h-[650px] bg-blue-700/15 rounded-full blur-3xl"
         />
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: `linear-gradient(rgba(147, 51, 234, 0.3) 1px, transparent 1px),
-                         linear-gradient(90deg, rgba(147, 51, 234, 0.3) 1px, transparent 1px)`,
-        backgroundSize: '50px 50px'
-      }} />
+      <div className="absolute inset-0 opacity-[0.015]"
+           style={{
+             backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+             backgroundSize: '50px 50px'
+           }} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-20 md:py-28">
         <motion.div
@@ -119,20 +108,20 @@ export default function AboutSection() {
               animate="animate"
               className="inline-block"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-600/10 border border-purple-500/30 backdrop-blur-xl">
-                <Sparkles className="w-4 h-4 text-purple-400" />
-                <span className="text-sm font-medium text-purple-300">Legacy Artist</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-500/30 backdrop-blur-xl">
+                <Sparkles className="w-4 h-4 text-blue-400" />
+                <span className="text-sm font-medium text-blue-300">Authentic Artist</span>
               </div>
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
-              The Art{" "}
+              The Journey of{" "}
               <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 bg-clip-text text-transparent">
-                  Robert Bernard
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                  Uno Vee
                 </span>
                 <motion.div
-                  className="absolute -inset-2 bg-gradient-to-r from-purple-600/20 to-purple-900/20 rounded-lg blur-2xl -z-10"
+                  className="absolute -inset-2 bg-gradient-to-r from-blue-600/20 to-cyan-900/20 rounded-lg blur-2xl -z-10"
                   animate={{ opacity: [0.3, 0.6, 0.3] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 />
@@ -140,7 +129,7 @@ export default function AboutSection() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-              A Journey of Legacy, Art, and Positivity
+              A Story of Inspiration, Expression, and Purpose
             </p>
           </motion.div>
 
@@ -148,62 +137,74 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left: Bio Content */}
             <motion.div variants={itemVariants} className="space-y-8">
-              <div className="group relative backdrop-blur-2xl bg-gradient-to-br from-black/80 to-purple-950/20 border border-purple-500/30 rounded-3xl p-8 md:p-10 hover:border-purple-500/60 transition-all duration-500 shadow-2xl">
+              <div className="group relative backdrop-blur-2xl bg-gradient-to-br from-black/80 to-blue-950/20 border border-blue-500/30 rounded-3xl p-8 md:p-10 hover:border-blue-500/60 transition-all duration-500 shadow-2xl">
                 {/* Glow Effect */}
-                <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-600/0 via-purple-600/50 to-purple-600/0 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+                <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-600/0 via-cyan-600/50 to-blue-600/0 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
                 
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 rounded-xl bg-purple-600/20 border border-purple-500/30">
-                    <Music className="w-6 h-6 text-purple-400" />
+                  <div className="p-3 rounded-xl bg-blue-600/20 border border-blue-500/30">
+                    <Music className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">The Artist</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">The Origin Story</h2>
                 </div>
 
                 <div className="space-y-5 text-gray-200 leading-relaxed">
                   <p className="text-base md:text-lg">
-                    Born in Atlanta, Georgia and raised in Detroit, Michigan, Robert Bernard is more than just an
-                    artist—he's a visionary with a purpose. His journey is rooted in the desire to create lasting
-                    impact, not just for himself, but for generations to come.
+                    I witnessed them create something that sounds good and displays expression in that moment I was 
+                    validated—I wanted to rap! Growing up, my inspirations were Master P and the No Limit Soldiers, 
+                    Triple Six Mafia, Project Pat, Playa Fly, T.I, Lil Wayne, The Hotboys, Mobb Deep, DMX, the Lox... 
+                    the list can go on.
                   </p>
 
-                  <div className="relative p-5 rounded-2xl bg-purple-900/20 border border-purple-500/20">
-                    <Heart className="absolute top-3 left-3 w-5 h-5 text-purple-400/50" />
+                  <div className="relative p-5 rounded-2xl bg-blue-900/20 border border-blue-500/20">
+                    <Heart className="absolute top-3 left-3 w-5 h-5 text-blue-400/50" />
                     <p className="text-base md:text-lg pl-8">
-                      <span className="text-purple-300 font-semibold block mb-2">
-                        "I want to just leave a legacy for my daughter to live by."
-                      </span>
-                      This philosophy drives everything Robert does. He's committed to leaving a stamp on the world as a
-                      mogul artist—one who doesn't just create music, but spreads light and positivity through every note.
+                      The music educated me in a way where I felt as though I could tell my side of the story too! 
+                      So I began to write my first rap. My uncle challenged me to write my first song and rap it to 
+                      him on beat—then the rest is history.
                     </p>
                   </div>
 
                   <p className="text-base md:text-lg">
-                    As an artist that spreads light and positivity, Robert Bernard is dedicated to giving people the
-                    motivation to achieve what they want from life. His music is a beacon of hope, his presence an
-                    inspiration, and his legacy a testament to the power of purpose-driven artistry.
+                    My goal in music moving forward is raising coherence to the frequency I naturally have. I do not 
+                    do this for profit. I do not do this for fame. I do this because it was my birthright and I must 
+                    obey.
                   </p>
+
+                  <div className="relative p-5 rounded-2xl bg-cyan-900/20 border border-cyan-500/20">
+                    <Sparkles className="absolute top-3 left-3 w-5 h-5 text-cyan-400/50" />
+                    <p className="text-base md:text-lg pl-8">
+                      <span className="text-cyan-300 font-semibold block mb-2">
+                        "Soon many will understand the messages and the correlation to the spirals of life."
+                      </span>
+                      I am now aligned to the purpose of my creations. I am beyond grateful for the acknowledgments 
+                      from everyone. If you have come across my work, you are eternally welcome. Always.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-purple-500/20">
+                <div className="mt-8 pt-8 border-t border-blue-500/20">
                   <h3 className="text-xl font-bold text-white mb-5 flex items-center gap-2">
-                    <Award className="w-5 h-5 text-purple-400" />
-                    Core Values
+                    <Award className="w-5 h-5 text-blue-400" />
+                    Musical Influences
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
-                      "Legacy & Family",
-                      "Artistic Excellence",
-                      "Spreading Positivity",
-                      "Empowering Others",
-                      "Authentic Expression",
-                      "Community Impact"
+                      "Master P & No Limit",
+                      "Triple Six Mafia",
+                      "Project Pat",
+                      "Playa Fly",
+                      "T.I & Lil Wayne",
+                      "The Hotboys",
+                      "Mobb Deep",
+                      "DMX & The Lox"
                     ].map((value, idx) => (
                       <motion.div
                         key={idx}
                         whileHover={{ x: 5 }}
-                        className="flex items-center gap-3 text-gray-300 p-3 rounded-lg bg-purple-900/10 hover:bg-purple-900/20 transition-colors border border-purple-500/10 hover:border-purple-500/30"
+                        className="flex items-center gap-3 text-gray-300 p-3 rounded-lg bg-blue-900/10 hover:bg-blue-900/20 transition-colors border border-blue-500/10 hover:border-blue-500/30"
                       >
-                        <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full" />
+                        <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-600 rounded-full" />
                         <span className="text-sm font-medium">{value}</span>
                       </motion.div>
                     ))}
@@ -220,22 +221,22 @@ export default function AboutSection() {
                   <div 
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                     style={{
-                      backgroundImage: "url('https://images.unsplash.com/photo-1508973379184-7517410fb0bc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFwJTIwY29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000')"
+                      backgroundImage: "url('https://res.cloudinary.com/diml90c1y/image/upload/v1770927919/WhatsApp_Image_2026-02-12_at_20.56.53_1_nm7few')"
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   {/* Border */}
-                  <div className="absolute inset-0 border-2 border-purple-500/40 rounded-3xl group-hover:border-purple-400/60 transition-colors duration-500" />
+                  <div className="absolute inset-0 border-2 border-blue-500/40 rounded-3xl group-hover:border-cyan-400/60 transition-colors duration-500" />
                   
                   {/* Glow Effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/30 via-purple-700/30 to-purple-900/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/30 via-cyan-700/30 to-blue-900/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
                   
                   {/* Content Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-2xl font-bold text-white mb-2">The Visionary</h3>
-                    <p className="text-gray-300 text-sm">Crafting Legacy Through Music</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">The Artist</h3>
+                    <p className="text-gray-300 text-sm">Aligned to Purpose</p>
                   </div>
                 </div>
               </div>
@@ -243,22 +244,22 @@ export default function AboutSection() {
               {/* Quick Stats Cards */}
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { icon: TrendingUp, label: "Years Active", value: "10+", color: "purple" },
-                  { icon: Music, label: "Projects", value: "50+", color: "purple" },
+                  { icon: TrendingUp, label: "Years Active", value: "10+", color: "blue" },
+                  { icon: Music, label: "Projects", value: "50+", color: "cyan" },
                 ].map((stat, idx) => (
                   <motion.div
                     key={idx}
                     whileHover={{ y: -5 }}
-                    className="relative backdrop-blur-2xl bg-gradient-to-br from-black/80 to-purple-950/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-500/60 transition-all duration-300 shadow-xl group"
+                    className="relative backdrop-blur-2xl bg-gradient-to-br from-black/80 to-blue-950/20 border border-blue-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all duration-300 shadow-xl group"
                   >
-                    <stat.icon className="w-8 h-8 text-purple-400 mb-3" />
-                    <p className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                    <stat.icon className="w-8 h-8 text-blue-400 mb-3" />
+                    <p className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent">
                       {stat.value}
                     </p>
                     <p className="text-sm text-gray-400 mt-1">{stat.label}</p>
                     
                     {/* Glow on hover */}
-                    <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-600/0 via-purple-600/50 to-purple-600/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+                    <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-600/0 via-cyan-600/50 to-blue-600/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
                   </motion.div>
                 ))}
               </div>
@@ -266,55 +267,7 @@ export default function AboutSection() {
           </div>
 
           {/* Gallery Section */}
-          <motion.div variants={itemVariants} className="space-y-8">
-            <div className="text-center space-y-3">
-              <h2 className="text-4xl md:text-5xl font-bold text-white">Journey Captured</h2>
-              <p className="text-gray-400">Moments that define the legacy</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  src: "https://res.cloudinary.com/diml90c1y/image/upload/v1760915727/PHOTO-2025-10-15-14-11-53_eszsbl.jpg",
-                  alt: "Robert Bernard - Moment 1",
-                  title: "The Artist at Work",
-                  desc: "Creating magic in the studio"
-                },
-                {
-                  src: "https://res.cloudinary.com/diml90c1y/image/upload/v1760915750/PHOTO-2025-10-15-14-11-58_svk5uu.jpg",
-                  alt: "Robert Bernard - Moment 2",
-                  title: "Creative Expression",
-                  desc: "Living the artistic vision"
-                },
-              ].map((image, idx) => (
-                <motion.div
-                  key={idx}
-                  whileHover={{ y: -10 }}
-                  className="group relative h-96 rounded-2xl overflow-hidden"
-                >
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{ backgroundImage: `url('${image.src}')` }}
-                  />
-                  
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Content */}
-                  <div className="absolute inset-0 flex flex-col justify-end p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-2xl font-bold text-white mb-2">{image.title}</h3>
-                    <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                      {image.desc}
-                    </p>
-                  </div>
-
-                  {/* Border & Glow */}
-                  <div className="absolute inset-0 border-2 border-purple-500/30 rounded-2xl group-hover:border-purple-400/60 transition-colors duration-500" />
-                  <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 via-purple-700/20 to-purple-900/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+     
 
           {/* Enhanced Stats Section */}
           <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -327,23 +280,23 @@ export default function AboutSection() {
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="relative backdrop-blur-2xl bg-gradient-to-br from-black/80 to-purple-950/20 border border-purple-500/30 rounded-2xl p-6 text-center hover:border-purple-500/60 transition-all duration-300 shadow-xl group"
+                className="relative backdrop-blur-2xl bg-gradient-to-br from-black/80 to-blue-950/20 border border-blue-500/30 rounded-2xl p-6 text-center hover:border-cyan-500/60 transition-all duration-300 shadow-xl group"
               >
-                <stat.icon className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-                <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent">
                   {stat.value}
                 </p>
                 <p className="text-sm md:text-base text-gray-400 mt-2">{stat.label}</p>
                 
                 {/* Hover Glow */}
-                <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-600/0 via-purple-600/50 to-purple-600/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+                <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-600/0 via-cyan-600/50 to-blue-600/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
               </motion.div>
             ))}
           </motion.div>
 
           {/* CTA Section */}
           <motion.div variants={itemVariants} className="text-center space-y-6">
-            <div className="relative backdrop-blur-2xl bg-gradient-to-br from-purple-900/40 to-purple-950/30 border border-purple-500/50 rounded-3xl p-10 md:p-12 hover:border-purple-400/70 transition-all duration-500 shadow-2xl group overflow-hidden">
+            <div className="relative backdrop-blur-2xl bg-gradient-to-br from-blue-900/40 to-blue-950/30 border border-blue-500/50 rounded-3xl p-10 md:p-12 hover:border-cyan-400/70 transition-all duration-500 shadow-2xl group overflow-hidden">
               {/* Animated Background Pattern */}
               <motion.div
                 className="absolute inset-0 opacity-10"
@@ -352,13 +305,13 @@ export default function AboutSection() {
                 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 style={{
-                  backgroundImage: `radial-gradient(circle at center, rgba(147, 51, 234, 0.3) 1px, transparent 1px)`,
+                  backgroundImage: `radial-gradient(circle at center, rgba(59, 130, 246, 0.3) 1px, transparent 1px)`,
                   backgroundSize: '50px 50px'
                 }}
               />
               
               {/* Glow Effect */}
-              <div className="absolute -inset-[2px] bg-gradient-to-r from-purple-600/30 via-purple-500/30 to-purple-600/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500 -z-10" />
+              <div className="absolute -inset-[2px] bg-gradient-to-r from-blue-600/30 via-cyan-500/30 to-blue-600/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500 -z-10" />
               
               <div className="relative z-10">
                 <motion.div
@@ -366,38 +319,38 @@ export default function AboutSection() {
                   animate="animate"
                   className="inline-block mb-4"
                 >
-                  <Sparkles className="w-12 h-12 text-purple-400 mx-auto" />
+                  <Sparkles className="w-12 h-12 text-blue-400 mx-auto" />
                 </motion.div>
                 
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Experience the Legacy
+                  Experience the Journey
                 </h3>
                 <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Join Robert Bernard on his journey of artistic excellence and positive impact. Discover music that
-                  inspires, motivates, and transforms.
+                  Join Robert Bernard on a journey aligned to purpose. Discover music born from authenticity, 
+                  expression, and the spirals of life.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    href="https://www.youtube.com/channel/UCNKynbHhfQq58XWygZAfQlQ"
+                    href="https://youtube.com/@unovee?si=FqOf8pexTh1KWaX8"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn relative px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-600/50 overflow-hidden"
+                    className="group/btn relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-700 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-600/50 overflow-hidden"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       <Music className="w-5 h-5" />
                       Listen Now
                     </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-500 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
                   </motion.a>
                   
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     href="/about"
-                    className="px-8 py-4 backdrop-blur-xl bg-white/10 border-2 border-purple-500/50 hover:border-purple-400/70 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
+                    className="px-8 py-4 backdrop-blur-xl bg-white/10 border-2 border-blue-500/50 hover:border-cyan-400/70 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
                   >
                     <Sparkles className="w-5 h-5" />
                     Learn More

@@ -131,12 +131,12 @@ export default function BlacRubyPortfolio() {
   {/* Background and Floating Elements */}
   <div className="absolute inset-0 z-0 pointer-events-none">
     {/* Purple gradient blobs - shifted to right */}
-    <div className="absolute top-1/4 right-1/5 w-64 sm:w-80 md:w-96 lg:w-[400px] h-64 sm:h-80 md:h-96 lg:h-[400px] bg-purple-950 rounded-full blur-3xl opacity-40" />
-    <div className="absolute bottom-1/4 right-1/5 w-48 sm:w-64 md:w-80 lg:w-[300px] h-48 sm:h-64 md:h-80 lg:h-[300px] bg-purple-950 rounded-full blur-3xl opacity-30" />
+    <div className="absolute top-1/4 right-1/5 w-64 sm:w-80 md:w-96 lg:w-[400px] h-64 sm:h-80 md:h-96 lg:h-[400px] bg-cyan-950 rounded-full blur-3xl opacity-40" />
+    <div className="absolute bottom-1/4 right-1/5 w-48 sm:w-64 md:w-80 lg:w-[300px] h-48 sm:h-64 md:h-80 lg:h-[300px] bg-cyan-950 rounded-full blur-3xl opacity-30" />
 
     {/* Floating elements - no pointer blocking */}
     <motion.div
-      className="absolute top-10 sm:top-16 md:top-20 right-8 sm:right-10 md:right-20 text-purple-900/80"
+      className="absolute top-10 sm:top-16 md:top-20 right-8 sm:right-10 md:right-20 text-cyan-900/80"
       variants={floatingVariants}
       animate="animate"
     >
@@ -187,7 +187,7 @@ export default function BlacRubyPortfolio() {
       viewport={{ once: true, amount: 0.5 }}
       variants={fadeInUp}
     >
-      — YUNG RAVACE
+      — UNO VEE
     </motion.p>
 
     {/* Clickable Buttons (Fixed z-index) */}

@@ -5,184 +5,275 @@ import { Button } from "@/components/ui/button";
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Background with Red Gradients matching reference */}
+      {/* Animated Background - Memphis Vibes */}
       <div className="absolute inset-0 z-0">
-        {/* Base dark background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-purple-950/30 to-black" />
+        {/* Deep gradient base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/40 to-black" />
         
-        {/* Left Red Gradient Shape - matching reference */}
-        <div className="absolute -left-32 top-0 h-full w-96 bg-gradient-to-r from-black via-purple-950/30 to-transparent transform -skew-x-12" />
-        <div className="absolute -left-16 top-0 h-full w-80 bg-gradient-to-r from-black via-purple-950/30   to-transparent transform -skew-x-12" />
+        {/* Animated gradient orbs */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse" 
+             style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" 
+             style={{ animationDuration: '5s', animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-3xl animate-pulse" 
+             style={{ animationDuration: '6s', animationDelay: '2s' }} />
         
-        {/* Right Red Gradient Shape - matching reference */}
-        <div className="absolute -right-32 top-0 h-full w-96 bg-gradient-to-l from-black via-purple-950/30  to-transparent transform skew-x-12" />
-        <div className="absolute -right-16 top-0 h-full w-80 bg-gradient-to-l from-black  via-black  to-transparent transform skew-x-12" />
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.015]"
+             style={{
+               backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+               backgroundSize: '50px 50px'
+             }} />
         
-        {/* Top gradient glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-40 bg-gradient-to-b from-black to-transparent" />
+        {/* Noise texture for depth */}
+        <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay"
+             style={{
+               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+               backgroundRepeat: 'repeat'
+             }} />
         
-        {/* Bottom gradient glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-40 bg-gradient-to-t from-black to-transparent" />
+        {/* Diagonal light beam */}
+        <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[1200px] bg-gradient-to-br from-cyan-400/5 via-blue-500/5 to-transparent rotate-45 blur-2xl" />
       </div>
 
-      {/* Main Content Container */}
+      {/* Main Content */}
       <div className="relative z-20 container mx-auto px-6 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-20">
           
-          {/* Left Side - Artist Info */}
+          {/* Left Side - Artist Identity */}
           <div className="space-y-8">
-            {/* Stats Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
-              <div className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 text-sm font-semibold">LIVE</span>
+            {/* Location Badge */}
+            <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10 backdrop-blur-2xl border border-cyan-400/20 shadow-xl shadow-cyan-500/10">
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-cyan-400 text-sm font-bold tracking-wide">MEMPHIS, TN</span>
               </div>
-              <div className="w-px h-4 bg-white/30"></div>
-              <span className="text-white/90 text-sm font-medium">50K+ Fans Worldwide</span>
+              <div className="w-px h-5 bg-cyan-400/30"></div>
+              <span className="text-white/90 text-sm font-semibold">90s Hip-Hop Legacy</span>
             </div>
 
-            {/* Stage Name & Real Name */}
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight">
-                  <span className="bg-gradient-to-r from-gray-400 via-red-500 to-gray-100 bg-clip-text text-transparent">
-                    YUNG
+            {/* Artist Name */}
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
+                  <span className="block bg-gradient-to-r from-cyan-200 via-blue-300 to-cyan-100 bg-clip-text text-transparent drop-shadow-2xl"
+                        style={{
+                          fontFamily: "'Archivo Black', sans-serif",
+                          letterSpacing: '-0.02em'
+                        }}>
+                    UNO
                   </span>
-                  <br />
-                  <span className="bg-gradient-to-r from-white via-red-100 to-red-300 bg-clip-text text-transparent">
-                    RAVAGE
+                  <span className="block bg-gradient-to-r from-white via-cyan-50 to-blue-100 bg-clip-text text-transparent drop-shadow-2xl mt-2"
+                        style={{
+                          fontFamily: "'Archivo Black', sans-serif",
+                          letterSpacing: '-0.02em'
+                        }}>
+                    VEE
                   </span>
                 </h1>
-                <p className="text-lg text-white/70 font-medium">
-                  Robert Bernard Lincoln II
+                <p className="text-xl text-cyan-300/80 font-semibold tracking-wide"
+                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  Vedal Foster
                 </p>
               </div>
               
-              <h2 className="text-2xl md:text-3xl font-bold text-white/90 tracking-wide">
-                OWN THE STAGE • RHYTHM IN EVERY BAR
+              <h2 className="text-2xl md:text-3xl font-bold text-white/90 tracking-wide uppercase"
+                  style={{ 
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    letterSpacing: '0.05em'
+                  }}>
+                Poetry in Motion • Sound & Soul
               </h2>
             </div>
 
             {/* Bio Section */}
-            <div className="backdrop-blur-lg bg-white/5 rounded-2xl p-6 border border-white/10 shadow-2xl">
-              <h3 className="text-xl font-bold text-red-400 mb-4">Artist Bio</h3>
-              <div className="space-y-3 text-white/80 leading-relaxed">
-                <p>Born in Atlanta Georgia and raised in Detroit Michigan.</p>
-                <p>I want to just leave a legacy for my daughter to live by.</p>
-                <p>I want to leave a stamp on the world as a mogul artist.</p>
-                <p>An artist that spreads light and positivity.</p>
-                <p>Giving people the motivation to achieve what they want from life.</p>
+            <div className="group relative backdrop-blur-2xl bg-gradient-to-br from-white/5 via-cyan-500/5 to-blue-500/5 rounded-3xl p-8 border border-white/10 shadow-2xl hover:border-cyan-400/30 transition-all duration-500">
+              {/* Glow effect on hover */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+              
+              <div className="relative">
+                <h3 className="text-2xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text mb-6 tracking-tight"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  The Journey
+                </h3>
+                <div className="space-y-4 text-white/90 leading-relaxed text-base"
+                     style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <p className="text-lg font-semibold">Born in Memphis, Tennessee in the 90s — where hip-hop and R&B weren't just music, they were life.</p>
+                  <p>Growing up, these sounds became my muse, inspiring me to express myself through poetry and sound from age 7.</p>
+                  <p>I watched my uncle recording freestyles with his friends on a jukebox, and they put me in the mix. That moment sparked everything.</p>
+                  <p className="text-cyan-300/90 font-semibold italic">Music isn't just what I do — it's who I am.</p>
+                </div>
               </div>
             </div>
 
-            {/* Action Buttons */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              {/* Primary Button */}
-             <button
-  className="
-    group relative 
-    px-8 py-4 
-    bg-white/5 
-    backdrop-blur-xl 
-    rounded-2xl 
-    border border-white/20 
-    shadow-xl shadow-black/40 
-    transform transition-all duration-500 
-    hover:scale-105 
-    hover:shadow-2xl hover:shadow-white/20 
-    overflow-hidden
-  "
->
-  <div 
-    className="
-      absolute inset-0 
-      bg-gradient-to-r from-transparent via-white/10 to-transparent 
-      opacity-0 group-hover:opacity-100 
-      transition-opacity duration-500 
-      blur-xl 
-    " 
-  />
-
-  <div className="relative flex items-center gap-3 font-bold text-lg text-white">
-    🔥 Book for a Show
-  </div>
-  
-  <div 
-    className="
-      absolute inset-0 
-      bg-gradient-to-r from-transparent via-white/40 to-transparent 
-      -skew-x-12 opacity-0 
-      group-hover:opacity-100 group-hover:animate-pulse 
-      transition-opacity duration-500
-    " 
-  />
-</button>
-              {/* Secondary Button */}
-              <button className="group relative px-8 py-4 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-2xl transform transition-all duration-300 hover:scale-105 hover:bg-white/20 hover:border-red-400/50 hover:shadow-red-400/25 hover:shadow-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-400/30 to-red-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg" />
-                <div className="relative flex items-center gap-3 font-bold text-lg text-white group-hover:text-red-100 transition-colors duration-300">
-                  🎧 Watch Live Freestyle
+              {/* Primary CTA - Elegant Gradient Button */}
+              <button className="group relative px-10 py-4 rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
+                {/* Animated gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 bg-[length:200%_100%] animate-gradient" />
+                
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400" />
+                
+                {/* Shine effect on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative flex items-center justify-center gap-2.5 font-semibold text-base text-white tracking-wide"
+                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                  Book Performance
+                </div>
+              </button>
+
+              {/* Secondary CTA - Refined Border Button */}
+              <button className="group relative px-10 py-4 rounded-full overflow-hidden backdrop-blur-xl bg-white/[0.03] border border-cyan-400/30 transition-all duration-300 hover:scale-[1.02] hover:border-cyan-400/60 hover:bg-white/[0.06] active:scale-[0.98]">
+                {/* Subtle gradient background on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Soft inner glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent blur-md" />
+                </div>
+                
+                <div className="relative flex items-center justify-center gap-2.5 font-semibold text-base text-white/90 group-hover:text-white tracking-wide transition-colors duration-300"
+                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  <svg className="w-5 h-5 group-hover:text-cyan-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  Watch Freestyle
+                </div>
               </button>
             </div>
 
-            {/* Performance Stats */}
+            <style jsx>{`
+              @keyframes gradient {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+              }
+              .animate-gradient {
+                animation: gradient 3s ease infinite;
+              }
+            `}</style>
+
+            {/* Stats Grid */}
             <div className="grid grid-cols-3 gap-4">
-              <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
-                <div className="text-2xl font-black text-red-400 mb-1">127</div>
-                <div className="text-white/70 text-sm font-medium">Shows</div>
-              </div>
-
-              <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
-                <div className="text-2xl font-black text-red-400 mb-1">2.5M</div>
-                <div className="text-white/70 text-sm font-medium">Views</div>
-              </div>
-
-              <div className="backdrop-blur-lg bg-white/5 rounded-xl p-4 border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
-                <div className="text-2xl font-black text-red-400 mb-1">98%</div>
-                <div className="text-white/70 text-sm font-medium">Energy</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side - Performance Image */}
-          <div className="relative lg:h-[600px] h-[400px]">
-            {/* Image Container with Glassmorphism */}
-            <div className="relative h-full rounded-3xl overflow-hidden backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl">
-              {/* Performance Image */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage: `url('https://res.cloudinary.com/diml90c1y/image/upload/v1760520429/WhatsApp_Image_2025-10-15_at_2.11.53_AM_vphrov.jpg')`
-                }}
-              />
-              
-              {/* Image Overlay for better integration */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-red-900/20" />
-              
-              {/* Floating Performance Badge */}
-              <div className="absolute top-6 right-6 backdrop-blur-lg bg-red-600/20 rounded-full px-4 py-2 border border-red-400/30">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                  <span className="text-red-300 text-sm font-semibold">PERFORMING</span>
+              <div className="group relative backdrop-blur-xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl p-5 border border-cyan-400/20 shadow-xl hover:border-cyan-400/40 hover:shadow-cyan-400/20 transition-all duration-300 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/0 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative">
+                  <div className="text-3xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text mb-1"
+                       style={{ fontFamily: "'Archivo Black', sans-serif" }}>
+                    30+
+                  </div>
+                  <div className="text-white/70 text-sm font-bold uppercase tracking-wider"
+                       style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                    Years
+                  </div>
                 </div>
               </div>
 
-              {/* Bottom Info Overlay */}
-              <div className="absolute bottom-6 left-6 right-6 backdrop-blur-lg bg-black/30 rounded-2xl p-4 border border-white/10">
-                <div className="text-white font-bold text-lg">Live at The Stage</div>
-                <div className="text-white/70 text-sm">Detroit • Atlanta Vibes</div>
+              <div className="group relative backdrop-blur-xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-2xl p-5 border border-blue-400/20 shadow-xl hover:border-blue-400/40 hover:shadow-blue-400/20 transition-all duration-300 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative">
+                  <div className="text-3xl font-black text-transparent bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text mb-1"
+                       style={{ fontFamily: "'Archivo Black', sans-serif" }}>
+                    MEM
+                  </div>
+                  <div className="text-white/70 text-sm font-bold uppercase tracking-wider"
+                       style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                    Born
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative backdrop-blur-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-2xl p-5 border border-indigo-400/20 shadow-xl hover:border-indigo-400/40 hover:shadow-indigo-400/20 transition-all duration-300 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/0 to-indigo-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative">
+                  <div className="text-3xl font-black text-transparent bg-gradient-to-r from-indigo-400 to-indigo-300 bg-clip-text mb-1"
+                       style={{ fontFamily: "'Archivo Black', sans-serif" }}>
+                    90s
+                  </div>
+                  <div className="text-white/70 text-sm font-bold uppercase tracking-wider"
+                       style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                    Era
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Artist Image */}
+          <div className="relative lg:h-[700px] h-[500px]">
+            {/* Main Image Container */}
+            <div className="group relative h-full rounded-3xl overflow-hidden backdrop-blur-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-400/20 shadow-2xl shadow-cyan-500/20 transition-all duration-500 hover:border-cyan-400/40 hover:shadow-cyan-400/30">
+              {/* Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                style={{
+                  backgroundImage: `url('https://res.cloudinary.com/diml90c1y/image/upload/v1770927909/WhatsApp_Image_2026-02-12_at_20.56.54_blvooz.jpg')`
+                }}
+              />
+              
+              {/* Gradient Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/30 via-transparent to-blue-900/30" />
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/40" />
+              
+              {/* Animated corner accent */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-400/30 to-transparent blur-2xl group-hover:w-40 group-hover:h-40 transition-all duration-500" />
+              
+              {/* Performance Badge */}
+              <div className="absolute top-6 right-6 backdrop-blur-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl px-5 py-3 border border-cyan-400/30 shadow-xl shadow-cyan-500/20">
+                <div className="flex items-center gap-3">
+                  <div className="relative flex items-center justify-center">
+                    <div className="absolute w-3 h-3 bg-cyan-400 rounded-full animate-ping" />
+                    <div className="relative w-3 h-3 bg-cyan-400 rounded-full" />
+                  </div>
+                  <span className="text-cyan-300 text-sm font-black tracking-wider"
+                        style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                    AVAILABLE
+                  </span>
+                </div>
+              </div>
+
+              {/* Bottom Info Card */}
+              <div className="absolute bottom-6 left-6 right-6 backdrop-blur-2xl bg-gradient-to-r from-black/60 via-black/50 to-black/60 rounded-2xl p-6 border border-cyan-400/20 shadow-2xl">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-1 h-12 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full" />
+                  <div>
+                    <div className="text-white font-black text-xl tracking-tight"
+                         style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                      Memphis Original
+                    </div>
+                    <div className="text-cyan-300/80 text-sm font-semibold"
+                         style={{ fontFamily: "'Inter', sans-serif" }}>
+                      Hip-Hop • R&B • Poetry
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Decorative Glow Effects around Image */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-red-600/20 to-red-400/20 rounded-3xl blur-2xl opacity-50 -z-10"></div>
-            <div className="absolute -inset-8 bg-gradient-to-r from-red-500/10 to-red-300/10 rounded-3xl blur-3xl opacity-30 -z-20"></div>
+            {/* Glowing Border Effects */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-cyan-500/30 rounded-3xl blur-2xl opacity-50 -z-10 animate-pulse" 
+                 style={{ animationDuration: '3s' }} />
+            <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10 rounded-3xl blur-3xl opacity-40 -z-20" />
           </div>
         </div>
       </div>
-    </section> 
+
+      {/* Google Fonts */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </section>
   );
 }
