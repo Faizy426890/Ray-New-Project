@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Send, MapPin, Clock, Crown, Diamond, Mic } from "lucide-react"
+import { Mail, Send, MapPin, Clock, Crown, Diamond, Mic, Phone } from "lucide-react"
 import { sendContactEmail } from "@/lib/sendMail"
 import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
@@ -27,10 +27,10 @@ export default function ContactSection() {
           draggable: true,
           theme: "dark",
           style: {
-            background: "linear-gradient(135deg, #9333EA 0%, #6B21A8 100%)",
+            background: "linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%)",
             color: "#fff",
             fontWeight: "700",
-            border: "1px solid rgba(147, 51, 234, 0.3)",
+            border: "1px solid rgba(30, 58, 138, 0.3)",
           },
         })
         const form = document.getElementById("contact-form") as HTMLFormElement
@@ -45,10 +45,10 @@ export default function ContactSection() {
           draggable: true,
           theme: "dark",
           style: {
-            background: "linear-gradient(135deg, #754999 0%, #23084b 100%)",
+            background: "linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%)",
             color: "white",
             fontWeight: "600",
-            border: "1px solid rgba(116, 67, 155, 0.3)",
+            border: "1px solid rgba(30, 58, 138, 0.3)",
           },
         })
       }
@@ -108,21 +108,21 @@ export default function ContactSection() {
         className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-black via-slate-950 to-black overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 right-1/6 w-64 sm:w-80 md:w-96 lg:w-[400px] h-64 sm:h-80 md:h-96 lg:h-[400px] bg-purple-950 rounded-full blur-3xl opacity-40" />
-          <div className="absolute bottom-1/4 left-1/6 w-48 sm:w-64 md:w-80 lg:w-[300px] h-48 sm:h-64 md:h-80 lg:h-[300px] bg-purple-950 rounded-full blur-3xl opacity-30" /> 
-          <div className="absolute top-1/4 righ-1/6 w-48 sm:w-64 md:w-80 lg:w-[300px] h-48 sm:h-64 md:h-80 lg:h-[300px] bg-purple-950 rounded-full blur-3xl opacity-30" />
+          <div className="absolute top-1/4 right-1/6 w-64 sm:w-80 md:w-96 lg:w-[400px] h-64 sm:h-80 md:h-96 lg:h-[400px] bg-blue-950 rounded-full blur-3xl opacity-40" />
+          <div className="absolute bottom-1/4 left-1/6 w-48 sm:w-64 md:w-80 lg:w-[300px] h-48 sm:h-64 md:h-80 lg:h-[300px] bg-blue-950 rounded-full blur-3xl opacity-30" /> 
+          <div className="absolute top-1/4 righ-1/6 w-48 sm:w-64 md:w-80 lg:w-[300px] h-48 sm:h-64 md:h-80 lg:h-[300px] bg-blue-950 rounded-full blur-3xl opacity-30" />
 
 
           {/* Floating Elements - Reduced for performance */}
           <motion.div
-            className="absolute top-10 sm:top-16 md:top-20 left-4 sm:left-8 md:left-20 text-purple-900/80"
+            className="absolute top-10 sm:top-16 md:top-20 left-4 sm:left-8 md:left-20 text-blue-900/80"
             variants={floatingVariants}
             animate="animate"
           >
             <Crown className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
           </motion.div>
           <motion.div
-            className="absolute top-1/3 right-4 sm:right-8 md:right-20 text-purple-950"
+            className="absolute top-1/3 right-4 sm:right-8 md:right-20 text-blue-950"
             variants={floatingVariants}
             animate="animate"
             transition={{ delay: 1 }}
@@ -130,7 +130,7 @@ export default function ContactSection() {
             <Diamond className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
           </motion.div>
           <motion.div
-            className="absolute bottom-16 sm:bottom-24 md:bottom-32 left-1/4 text-purple-950"
+            className="absolute bottom-16 sm:bottom-24 md:bottom-32 left-1/4 text-blue-950"
             variants={floatingVariants}
             animate="animate"
             transition={{ delay: 2 }}
@@ -138,7 +138,7 @@ export default function ContactSection() {
             <Mic className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
           </motion.div>
 
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(88,28,135,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(88,28,135,0.01)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:50px_50px] md:bg-[size:60px_60px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(30,58,138,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(30,58,138,0.01)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:50px_50px] md:bg-[size:60px_60px]" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -151,16 +151,16 @@ export default function ContactSection() {
             variants={containerVariants}
           >
             <motion.div
-              className="inline-flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full bg-black/40 backdrop-blur-xl border border-purple-500/15 mb-6 sm:mb-8 md:mb-10 shadow-lg shadow-purple-500/80"
+              className="inline-flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full bg-black/40 backdrop-blur-xl border border-blue-500/15 mb-6 sm:mb-8 md:mb-10 shadow-lg shadow-blue-500/80"
               variants={itemVariants}
             >
-              <div className="w-2 h-2 bg-purple-900/90 rounded-full animate-pulse" />
-              <Crown className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-purple-400/70" />
-              <span className="text-xs sm:text-sm font-bold text-purple-200/60 tracking-wider uppercase">
+              <div className="w-2 h-2 bg-blue-900/90 rounded-full animate-pulse" />
+              <Crown className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-blue-400/70" />
+              <span className="text-xs sm:text-sm font-bold text-blue-200/60 tracking-wider uppercase">
                 Elite Collaboration
               </span>
-              <Diamond className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-purple-500/60" />
-              <div className="w-2 h-2 bg-purple-600/60 rounded-full animate-pulse" />
+              <Diamond className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-blue-500/60" />
+              <div className="w-2 h-2 bg-blue-600/60 rounded-full animate-pulse" />
             </motion.div>
 
             <motion.h2
@@ -168,7 +168,7 @@ export default function ContactSection() {
               variants={itemVariants}
             >
               <span className="text-white drop-shadow-2xl">Let's</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-purple-200 to-purple-300 drop-shadow-2xl">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-200 to-blue-300 drop-shadow-2xl">
                 Connect
               </span>
             </motion.h2>
@@ -176,7 +176,7 @@ export default function ContactSection() {
             <motion.div className="max-w-4xl mx-auto px-4" variants={itemVariants}>
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed font-medium mb-4 sm:mb-6">
                 Ready to create something{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-gray-200 font-bold">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-gray-200 font-bold">
                   legendary
                 </span>
                 ?
@@ -198,62 +198,62 @@ export default function ContactSection() {
               variants={containerVariants}
             >
               <motion.div
-                className="group relative bg-black/50 backdrop-blur-2xl border border-purple-500/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 hover:border-purple-500/20 transition-all duration-500 shadow-2xl shadow-purple-500/5 hover:shadow-purple-500/15"
+                className="group relative bg-black/50 backdrop-blur-2xl border border-blue-500/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 hover:border-blue-500/20 transition-all duration-500 shadow-2xl shadow-blue-500/5 hover:shadow-blue-500/15"
                 variants={itemVariants}
                 whileHover={{ scale: 1.01, y: -4 }}
               >
-                <div className="absolute inset-0 bg-purple-500/5 rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-blue-500/5 rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-black border border-purple-500/30 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:shadow-purple-500/40 transition-all duration-500">
-                      <Mail className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-purple-400" />
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-black border border-blue-500/30 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-all duration-500">
+                      <Mail className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-blue-400" />
                     </div>
                     <div>
                       <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-1 sm:mb-2">
                         Elite Contact
                       </h3>
-                      <p className="text-purple-300/70 font-semibold text-sm sm:text-base md:text-lg">
+                      <p className="text-blue-300/70 font-semibold text-sm sm:text-base md:text-lg">
                         Professional Inquiries Only
                       </p>
                     </div>
                   </div>
 
                   <div className="space-y-4 sm:space-y-6">
-                    <div className="flex items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-black/40 border border-purple-500/10 backdrop-blur-xl hover:border-purple-500/20 transition-all duration-300 group/item hover:shadow-lg hover:shadow-purple-500/10">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black border border-purple-500/25 rounded-lg sm:rounded-xl flex items-center justify-center shadow-md shadow-purple-500/15 group-hover/item:shadow-purple-500/25 transition-all duration-300">
-                        <Mail className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-purple-400" />
+                    <div className="flex items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-black/40 border border-blue-500/10 backdrop-blur-xl hover:border-blue-500/20 transition-all duration-300 group/item hover:shadow-lg hover:shadow-blue-500/10">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black border border-blue-500/25 rounded-lg sm:rounded-xl flex items-center justify-center shadow-md shadow-blue-500/15 group-hover/item:shadow-blue-500/25 transition-all duration-300">
+                        <Mail className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-400" />
                       </div>
                       <div className="min-w-0 flex-1">
-                        <p className="text-purple-300/60 text-xs sm:text-sm font-bold uppercase tracking-widest mb-1">
+                        <p className="text-blue-300/60 text-xs sm:text-sm font-bold uppercase tracking-widest mb-1">
                           Direct Email
                         </p>
                         <p className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl break-all">
-                          yungravvy17@yahoo.com
+                          Unovee@gmail.com
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-black/40 border border-purple-500/10 backdrop-blur-xl hover:border-purple-500/20 transition-all duration-300 group/item hover:shadow-lg hover:shadow-purple-500/10">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black border border-purple-500/25 rounded-lg sm:rounded-xl flex items-center justify-center shadow-md shadow-purple-500/15 group-hover/item:shadow-purple-500/25 transition-all duration-300">
-                        <MapPin className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-purple-400" />
+                    <div className="flex items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-black/40 border border-blue-500/10 backdrop-blur-xl hover:border-blue-500/20 transition-all duration-300 group/item hover:shadow-lg hover:shadow-blue-500/10">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black border border-blue-500/25 rounded-lg sm:rounded-xl flex items-center justify-center shadow-md shadow-blue-500/15 group-hover/item:shadow-blue-500/25 transition-all duration-300">
+                        <Phone className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-400" />
                       </div>
                       <div>
-                        <p className="text-purple-300/60 text-xs sm:text-sm font-bold uppercase tracking-widest mb-1">
-                          Based In
+                        <p className="text-blue-300/60 text-xs sm:text-sm font-bold uppercase tracking-widest mb-1">
+                          Phone
                         </p>
                         <p className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl">
-                          Detroit Michigan
+                          901-229-0260
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-black/40 border border-purple-500/10 backdrop-blur-xl hover:border-purple-500/20 transition-all duration-300 group/item hover:shadow-lg hover:shadow-purple-500/10">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black border border-purple-500/25 rounded-lg sm:rounded-xl flex items-center justify-center shadow-md shadow-purple-500/15 group-hover/item:shadow-purple-500/25 transition-all duration-300">
-                        <Clock className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-purple-400" />
+                    <div className="flex items-center gap-4 sm:gap-6 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-black/40 border border-blue-500/10 backdrop-blur-xl hover:border-blue-500/20 transition-all duration-300 group/item hover:shadow-lg hover:shadow-blue-500/10">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black border border-blue-500/25 rounded-lg sm:rounded-xl flex items-center justify-center shadow-md shadow-blue-500/15 group-hover/item:shadow-blue-500/25 transition-all duration-300">
+                        <Clock className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-400" />
                       </div>
                       <div>
-                        <p className="text-purple-300/60 text-xs sm:text-sm font-bold uppercase tracking-widest mb-1">
+                        <p className="text-blue-300/60 text-xs sm:text-sm font-bold uppercase tracking-widest mb-1">
                           Response Time
                         </p>
                         <p className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl">
@@ -266,11 +266,11 @@ export default function ContactSection() {
               </motion.div>
 
               <motion.div
-                className="bg-black/40 backdrop-blur-2xl border border-purple-500/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg shadow-purple-500/5 hover:shadow-purple-500/15 transition-all duration-300"
+                className="bg-black/40 backdrop-blur-2xl border border-blue-500/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg shadow-blue-500/5 hover:shadow-blue-500/15 transition-all duration-300"
                 variants={itemVariants}
               >
                 <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-                  <Crown className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-purple-400/70" />
+                  <Crown className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-blue-400/70" />
                   <h4 className="text-lg sm:text-xl md:text-2xl font-black text-white">Premium Services</h4>
                 </div>
                 <ul className="space-y-3 sm:space-y-4 md:space-y-5">
@@ -278,33 +278,33 @@ export default function ContactSection() {
                     {
                       icon: "🎤",
                       text: "Exclusive Live Performances",
-                      accent: "border-purple-500/10",
+                      accent: "border-blue-500/10",
                     },
                     {
                       icon: "🎵",
                       text: "High-End Collaborations",
-                      accent: "border-purple-500/10",
+                      accent: "border-blue-500/10",
                     },
                     {
                       icon: "📺",
                       text: "Media & Press Interviews",
-                      accent: "border-purple-500/10",
+                      accent: "border-blue-500/10",
                     },
                     {
                       icon: "💼",
                       text: "Strategic Partnerships",
-                      accent: "border-purple-500/10",
+                      accent: "border-blue-500/10",
                     },
                   ].map((item, index) => (
                     <motion.li
                       key={index}
-                      className={`flex items-center gap-4 sm:gap-6 p-3 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl bg-black/30 border ${item.accent} backdrop-blur-xl hover:scale-[1.01] hover:border-purple-500/20 hover:shadow-md hover:shadow-purple-500/10 transition-all duration-300 group`}
+                      className={`flex items-center gap-4 sm:gap-6 p-3 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl bg-black/30 border ${item.accent} backdrop-blur-xl hover:scale-[1.01] hover:border-blue-500/20 hover:shadow-md hover:shadow-blue-500/10 transition-all duration-300 group`}
                       whileHover={{ x: 3 }}
                     >
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-black border border-purple-500/20 rounded-lg sm:rounded-xl flex items-center justify-center text-sm sm:text-base md:text-xl shadow-md shadow-purple-500/10 group-hover:shadow-purple-500/20 transition-all duration-300">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-black border border-blue-500/20 rounded-lg sm:rounded-xl flex items-center justify-center text-sm sm:text-base md:text-xl shadow-md shadow-blue-500/10 group-hover:shadow-blue-500/20 transition-all duration-300">
                         {item.icon}
                       </div>
-                      <span className="text-white font-semibold text-sm sm:text-base md:text-lg group-hover:text-purple-200 transition-colors duration-300">
+                      <span className="text-white font-semibold text-sm sm:text-base md:text-lg group-hover:text-blue-200 transition-colors duration-300">
                         {item.text}
                       </span>
                     </motion.li>
@@ -321,21 +321,21 @@ export default function ContactSection() {
               viewport={{ once: true, amount: 0.3 }}
               variants={itemVariants}
             >
-              <div className="relative bg-black/50 backdrop-blur-2xl border border-purple-500/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 shadow-2xl shadow-purple-500/5 hover:shadow-purple-500/15 transition-all duration-300">
-                <div className="absolute inset-0 bg-purple-500/3 rounded-2xl sm:rounded-3xl" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.03),transparent_70%)] rounded-2xl sm:rounded-3xl" />
+              <div className="relative bg-black/50 backdrop-blur-2xl border border-blue-500/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 shadow-2xl shadow-blue-500/5 hover:shadow-blue-500/15 transition-all duration-300">
+                <div className="absolute inset-0 bg-blue-500/3 rounded-2xl sm:rounded-3xl" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(30,58,138,0.03),transparent_70%)] rounded-2xl sm:rounded-3xl" />
 
                 <div className="relative z-10">
                   <div className="text-center mb-8 sm:mb-10 md:mb-12">
-                    <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-black/40 border border-purple-500/15 mb-4 sm:mb-6">
-                      <Diamond className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400/70" />
-                      <span className="text-purple-300/70 font-bold text-xs sm:text-sm uppercase tracking-wider">
+                    <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-black/40 border border-blue-500/15 mb-4 sm:mb-6">
+                      <Diamond className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400/70" />
+                      <span className="text-blue-300/70 font-bold text-xs sm:text-sm uppercase tracking-wider">
                         Premium Contact
                       </span>
                     </div>
                     <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 leading-tight">
                       Send Your{" "}
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-200">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-200">
                         Message
                       </span>
                     </h3>
@@ -349,25 +349,25 @@ export default function ContactSection() {
                       <div className="space-y-3 sm:space-y-4">
                         <label
                           htmlFor="name"
-                          className="text-purple-300/70 text-xs sm:text-sm font-bold uppercase tracking-widest flex items-center gap-2"
+                          className="text-blue-300/70 text-xs sm:text-sm font-bold uppercase tracking-widest flex items-center gap-2"
                         >
-                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500/60 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500/60 rounded-full"></div>
                           Full Name *
                         </label>
                         <Input
                           id="name"
                           name="name"
                           required
-                          className="h-12 sm:h-14 md:h-16 bg-black/40 border-purple-500/10 text-white placeholder:text-gray-500 focus:border-purple-500/30 focus:ring-purple-500/10 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg backdrop-blur-xl font-medium hover:border-purple-500/20 transition-all duration-300"
+                          className="h-12 sm:h-14 md:h-16 bg-black/40 border-blue-500/10 text-white placeholder:text-gray-500 focus:border-blue-500/30 focus:ring-blue-500/10 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg backdrop-blur-xl font-medium hover:border-blue-500/20 transition-all duration-300"
                           placeholder="Your full name"
                         />
                       </div>
                       <div className="space-y-3 sm:space-y-4">
                         <label
                           htmlFor="email"
-                          className="text-purple-300/70 text-xs sm:text-sm font-bold uppercase tracking-widest flex items-center gap-2"
+                          className="text-blue-300/70 text-xs sm:text-sm font-bold uppercase tracking-widest flex items-center gap-2"
                         >
-                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500/60 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500/60 rounded-full"></div>
                           Email Address *
                         </label>
                         <Input
@@ -375,7 +375,7 @@ export default function ContactSection() {
                           name="email"
                           type="email"
                           required
-                          className="h-12 sm:h-14 md:h-16 bg-black/40 border-purple-500/10 text-white placeholder:text-gray-500 focus:border-purple-500/30 focus:ring-purple-500/10 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg backdrop-blur-xl font-medium hover:border-purple-500/20 transition-all duration-300"
+                          className="h-12 sm:h-14 md:h-16 bg-black/40 border-blue-500/10 text-white placeholder:text-gray-500 focus:border-blue-500/30 focus:ring-blue-500/10 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg backdrop-blur-xl font-medium hover:border-blue-500/20 transition-all duration-300"
                           placeholder="your@email.com"
                         />
                       </div>
@@ -384,16 +384,16 @@ export default function ContactSection() {
                     <div className="space-y-3 sm:space-y-4">
                       <label
                         htmlFor="subject"
-                        className="text-purple-300/70 text-xs sm:text-sm font-bold uppercase tracking-widest flex items-center gap-2"
+                        className="text-blue-300/70 text-xs sm:text-sm font-bold uppercase tracking-widest flex items-center gap-2"
                       >
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500/60 rounded-full"></div>
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500/60 rounded-full"></div>
                         Subject *
                       </label>
                       <Input
                         id="subject"
                         name="subject"
                         required
-                        className="h-12 sm:h-14 md:h-16 bg-black/40 border-purple-500/10 text-white placeholder:text-gray-500 focus:border-purple-500/30 focus:ring-purple-500/10 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg backdrop-blur-xl font-medium hover:border-purple-500/20 transition-all duration-300"
+                        className="h-12 sm:h-14 md:h-16 bg-black/40 border-blue-500/10 text-white placeholder:text-gray-500 focus:border-blue-500/30 focus:ring-blue-500/10 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg backdrop-blur-xl font-medium hover:border-blue-500/20 transition-all duration-300"
                         placeholder="What's this about?"
                       />
                     </div>
@@ -401,9 +401,9 @@ export default function ContactSection() {
                     <div className="space-y-3 sm:space-y-4">
                       <label
                         htmlFor="message"
-                        className="text-purple-300/70 text-xs sm:text-sm font-bold uppercase tracking-widest flex items-center gap-2"
+                        className="text-blue-300/70 text-xs sm:text-sm font-bold uppercase tracking-widest flex items-center gap-2"
                       >
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500/60 rounded-full"></div>
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500/60 rounded-full"></div>
                         Message *
                       </label>
                       <Textarea
@@ -411,7 +411,7 @@ export default function ContactSection() {
                         name="message"
                         required
                         rows={6}
-                        className="bg-black/40 border-purple-500/10 text-white placeholder:text-gray-500 focus:border-purple-500/30 focus:ring-purple-500/10 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg resize-none backdrop-blur-xl font-medium hover:border-purple-500/20 transition-all duration-300 min-h-[120px] sm:min-h-[140px] md:min-h-[160px]"
+                        className="bg-black/40 border-blue-500/10 text-white placeholder:text-gray-500 focus:border-blue-500/30 focus:ring-blue-500/10 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg resize-none backdrop-blur-xl font-medium hover:border-blue-500/20 transition-all duration-300 min-h-[120px] sm:min-h-[140px] md:min-h-[160px]"
                         placeholder="Tell me about your project, booking request, collaboration idea, or business opportunity. Be specific about your vision and timeline..."
                       />
                     </div>
@@ -419,11 +419,11 @@ export default function ContactSection() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-14 sm:h-16 md:h-18 lg:h-20 bg-black border border-purple-500/30 hover:border-purple-500/50 text-purple-300 hover:text-purple-200 font-black text-base sm:text-lg md:text-xl rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-[1.01] hover:shadow-xl hover:text-black hover:shadow-purple-500/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none group shadow-lg shadow-purple-500/10"
+                      className="w-full h-14 sm:h-16 md:h-18 lg:h-20 bg-black border border-blue-500/30 hover:border-blue-500/50 text-blue-300 hover:text-blue-200 font-black text-base sm:text-lg md:text-xl rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-[1.01] hover:shadow-xl hover:text-black hover:shadow-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none group shadow-lg shadow-blue-500/10"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center gap-3 sm:gap-4">
-                          <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 border-2 sm:border-3 border-purple-500/30 border-t-purple-400 rounded-full animate-spin"></div>
+                          <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 border-2 sm:border-3 border-blue-500/30 border-t-blue-400 rounded-full animate-spin"></div>
                           <span>Sending Your Message...</span>
                         </div>
                       ) : (
@@ -456,9 +456,9 @@ export default function ContactSection() {
         toastStyle={{
           borderRadius: "16px",
           backdropFilter: "blur(16px)",
-          border: "1px solid rgba(147,51,234,0.15)",
+          border: "1px solid rgba(30,58,138,0.15)",
           background: "linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(20,20,30,0.95) 100%)",
-          boxShadow: "0 20px 40px -12px rgba(147,51,234,0.2)",
+          boxShadow: "0 20px 40px -12px rgba(30,58,138,0.2)",
         }}
       />
     </>
