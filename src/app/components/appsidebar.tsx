@@ -28,9 +28,7 @@ import { italianno } from "@/lib/fonts"
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/music", label: "Music" },
-  { href: "/platforms", label: "Platforms" },
+
 ]
 
 export function AppShell({ children }: { children: React.ReactNode }) {

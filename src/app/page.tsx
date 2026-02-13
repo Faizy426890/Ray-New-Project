@@ -7,11 +7,13 @@ import { MenuIcon, X } from "lucide-react"
 import MusicSection from "./components/Music-Section"
 import ContactSection from "./components/contact-section" 
 import AboutSection from "./components/About"
-import HeroSection from "./components/Hero-section"
+import HeroSection from "./components/Hero-section" 
+import MyMusic from "./components/Music"
 import OutNowSection from "./components/outnow-section"
 import { useState, useEffect } from "react"   
 import SocialMedia from "./components/Links"
 import SocialSection from "./components/Social" 
+import About from "./components/about-us"
 import { Mail, Send, MapPin, Clock, Crown, Diamond, Mic } from "lucide-react"
 
 
@@ -216,10 +218,17 @@ export default function BlacRubyPortfolio() {
       </Button>
     </motion.div>
   </div>
-</section> 
+</section>  
 
-  <AboutSection/>
-      <ContactSection />
+    <About/> 
+  <AboutSection/>   
+  <MyMusic/>
+
+  
+      {/* Contact Section with ID for scroll navigation */}
+      <div id="contact-section">
+        <ContactSection />
+      </div>
 
       {/* Footer */}
       <footer className="py-8 px-6 md:px-12 text-center text-white/60 text-sm border-t border-white/10 bg-slate-950">

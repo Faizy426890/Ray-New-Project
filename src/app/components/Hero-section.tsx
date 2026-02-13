@@ -111,8 +111,16 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              {/* Primary CTA - Elegant Gradient Button */}
-              <button className="group relative px-10 py-4 rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
+              {/* Primary CTA - Book Performance (Scroll to Contact) */}
+              <button 
+                onClick={() => {
+                  const contactSection = document.getElementById('contact-section');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+                className="group relative px-10 py-4 rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+              >
                 {/* Animated gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 bg-[length:200%_100%] animate-gradient" />
                 
@@ -133,8 +141,13 @@ export default function HeroSection() {
                 </div>
               </button>
 
-              {/* Secondary CTA - Refined Border Button */}
-              <button className="group relative px-10 py-4 rounded-full overflow-hidden backdrop-blur-xl bg-white/[0.03] border border-cyan-400/30 transition-all duration-300 hover:scale-[1.02] hover:border-cyan-400/60 hover:bg-white/[0.06] active:scale-[0.98]">
+              {/* Secondary CTA - Watch Freestyle (Navigate to YouTube) */}
+              <button 
+                onClick={() => {
+                  window.open('https://youtube.com/@unovee?si=FqOf8pexTh1KWaX8', '_blank');
+                }}
+                className="group relative px-10 py-4 rounded-full overflow-hidden backdrop-blur-xl bg-white/[0.03] border border-cyan-400/30 transition-all duration-300 hover:scale-[1.02] hover:border-cyan-400/60 hover:bg-white/[0.06] active:scale-[0.98] cursor-pointer"
+              >
                 {/* Subtle gradient background on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 

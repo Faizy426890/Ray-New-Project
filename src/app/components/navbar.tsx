@@ -9,9 +9,7 @@ import { useIsMobile } from "@/hooks/use-mobile" // import for conditional trigg
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/music", label: "Music" },
-  { href: "/platforms", label: "Platforms" },
+
 ]
 
 export default function SiteNavbar() {
