@@ -203,7 +203,7 @@ export default function BlacRubyPortfolio() {
       <Button
         className="bg-gradient-to-r cursor-pointer from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white border-0 px-8 py-3 rounded-full font-medium shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 transition-all duration-300 hover:scale-105"
         onClick={() =>
-          window.open("https://www.instagram.com/yung_ravage?igsh=bnh0OXd2OXcyd3d2", "_blank")
+          window.open("https://www.instagram.com/unovee_bewealthy?igsh=aW42aTZva3k3OHlq", "_blank")
         }
       >
         Follow for updates
@@ -211,7 +211,7 @@ export default function BlacRubyPortfolio() {
       <Button
         className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-8 py-3 rounded-full font-medium shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
         onClick={() =>
-          window.open("https://www.instagram.com/yung_ravage?igsh=bnh0OXd2OXcyd3d2", "_blank")
+          window.open("https://www.instagram.com/unovee_bewealthy?igsh=aW42aTZva3k3OHlq", "_blank")
         }
       >
         Follow on Instagram

@@ -165,22 +165,9 @@ export default function AboutSection() {
                     </p>
                   </div>
 
-                  <p className="text-base md:text-lg">
-                    My goal in music moving forward is raising coherence to the frequency I naturally have. I do not 
-                    do this for profit. I do not do this for fame. I do this because it was my birthright and I must 
-                    obey.
-                  </p>
+               
 
-                  <div className="relative p-5 rounded-2xl bg-cyan-900/20 border border-cyan-500/20">
-                    <Sparkles className="absolute top-3 left-3 w-5 h-5 text-cyan-400/50" />
-                    <p className="text-base md:text-lg pl-8">
-                      <span className="text-cyan-300 font-semibold block mb-2">
-                        "Soon many will understand the messages and the correlation to the spirals of life."
-                      </span>
-                      I am now aligned to the purpose of my creations. I am beyond grateful for the acknowledgments 
-                      from everyone. If you have come across my work, you are eternally welcome. Always.
-                    </p>
-                  </div>
+               
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-blue-500/20">
@@ -346,15 +333,7 @@ export default function AboutSection() {
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
                   </motion.a>
                   
-                  <motion.a
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    href="/about"
-                    className="px-8 py-4 backdrop-blur-xl bg-white/10 border-2 border-blue-500/50 hover:border-cyan-400/70 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
-                  >
-                    <Sparkles className="w-5 h-5" />
-                    Learn More
-                  </motion.a>
+                 
                 </div>
               </div>
             </div>

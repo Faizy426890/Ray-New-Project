@@ -117,18 +117,10 @@ function DiscoverMenu() {
   return (
     <SidebarMenu>
       <SidebarMenuItem>
-        <SidebarMenuButton asChild>
-          <Link href="/music" onClick={handleClick}>
-            Latest Tracks
-          </Link>
-        </SidebarMenuButton>
+    
       </SidebarMenuItem>
       <SidebarMenuItem>
-        <SidebarMenuButton asChild>
-          <Link href="/platforms" onClick={handleClick}>
-            Platforms
-          </Link>
-        </SidebarMenuButton>
+       
       </SidebarMenuItem>
     </SidebarMenu>
   )
